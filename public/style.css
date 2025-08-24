@@ -14,3 +14,55 @@
   padding: 5px 15px;
   border-radius: 16px;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  text-align: center;
+  color: #333;
+  margin: 20px;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+form button {
+  background: linear-gradient(90deg, #4CAF50, #2E8B57);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #45a049, #1e6f4d);
+  transform: scale(1.05);
+}
+
+.chat {
+  background: white;
+  width: 60%;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.chat p {
+  margin: 6px 0;
+}
+
+.msg {
+  background: #187842;
+  padding: 10px;
+  border-radius: 8px;
+  font-style: italic;
+}

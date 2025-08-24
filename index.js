@@ -15,8 +15,11 @@ main().
   .catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/Whatsapp');
+ await mongoose.connect("mongodb://whatsappuser:yourpassword123@127.0.0.1:27017/Whatsapp");
+
 }
+
+
 //Index Route
 app.get("/chats", async (req, res) => {
   let chats = await Chat.find();
@@ -50,10 +53,16 @@ app.post("/chats", (req, res) => {
   res.redirect("/chats")
 })
 
+//Edit Route
 
+app.get("/chats/:id/edit",async (req,res)=>{
+  let{id}=req.params;
+  let chat=await Chat.findById(id)
+  res.render("edit",{chat});
+})
 app.get("/", (req, res) => {
   res.send("root is working")
 })
 app.listen(8080, () => {
-  console.log("Server is listeining on popt 8080 ")
+  console.log("Server is listeining on port 8080 ")
 })
